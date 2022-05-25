@@ -11,9 +11,14 @@ public class Divisao implements Calculo{
     public double calcular(double n1, double n2) {
         this.n1 = n1;
         this.n2 = n2;
-        divisao = (n1 / n2);
+        if (n2 != 0) {
+            divisao = (n1 / n2);
 
-        return divisao;
+            return divisao;
+        } else {
+            return 0;
+        }
+
     }
 
     @Override
