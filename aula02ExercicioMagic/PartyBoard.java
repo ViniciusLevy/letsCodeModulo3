@@ -85,13 +85,13 @@ public class PartyBoard implements IBoard{
             System.out.println("Player Two sucessfully added");
         } else if (player3 == null) {
             player3 = player;
-            System.out.println("Player Two sucessfully added");
+            System.out.println("Player Three sucessfully added");
         } else if (player4 == null) {
             player4 = player;
-            System.out.println("Player Two sucessfully added");
+            System.out.println("Player Four sucessfully added");
         } else if (player5 == null) {
             player5 = player;
-            System.out.println("Player Two sucessfully added");
+            System.out.println("Player Five sucessfully added");
         } else {
             System.out.println("Player's already added.");
         }
