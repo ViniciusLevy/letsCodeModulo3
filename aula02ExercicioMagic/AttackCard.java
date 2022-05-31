@@ -1,34 +1,36 @@
 package aula02ExercicioMagic;
 
-public class AttackCard extends StandardCard implements IAttackCard{
+public class AttackCard extends Card{
 
-    private int attackPoints;
-    private int defensePoints;
+    protected int power;
+    protected int resistance;
 
-    public AttackCard(String name, CardsType type, int manaCost, int attackPoints, int defensePoints) {
-        super(name,type, manaCost);
-        setAttackPoints(attackPoints);
-        setDefensePoints(defensePoints);
+    public int getPower() {
+        return power;
+    }
+
+    public int getResistance() {
+        return resistance;
     }
 
     @Override
-    public int getAttackPoints() {
-        return attackPoints;
+    public String getName() {
+        return name;
     }
 
     @Override
-    public void setAttackPoints(int attackPoints) {
-        this.attackPoints = attackPoints;
+    public Type getType() {
+        return type;
     }
 
     @Override
-    public int getDefensePoints() {
-        return defensePoints;
+    public int getCost() {
+        return cost;
     }
 
-    @Override
-    public void setDefensePoints(int defensePoints) {
-        this.defensePoints = defensePoints;
+    public AttackCard(String name, Type type, int cost, int power, int resistance) {
+        super();
+        this.power = power;
+        this.resistance = resistance;
     }
-
 }

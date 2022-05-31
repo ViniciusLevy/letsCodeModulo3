@@ -1,27 +1,42 @@
 package aula02ExercicioMagic;
 
-public class SpecialAttackCard extends AttackCard implements ISpecialAttackCard {
+enum Effects {STUN, BLEED, POISON}
 
-    private Effects effect;
+public class SpecialAttackCard extends AttackCard{
 
-    public SpecialAttackCard(
-            String name,
-            CardsType type,
-            int manaCost,
-            int attackPoints,
-            int defensePoints,
-            Effects effect) {
-        super(name, type, manaCost, attackPoints, defensePoints);
-        setEffect(effect);
-    }
+    protected Effects effect;
 
-    @Override
     public Effects getEffect() {
         return effect;
     }
 
     @Override
-    public void setEffect(Effects effect) {
+    public String getName() {
+        return super.getName();
+    }
+
+    @Override
+    public Type getType() {
+        return super.getType();
+    }
+
+    @Override
+    public int getCost() {
+        return super.getCost();
+    }
+
+    @Override
+    public int getPower() {
+        return super.getPower();
+    }
+
+    @Override
+    public int getResistance() {
+        return super.getResistance();
+    }
+
+    public SpecialAttackCard(String name, Type type, int cost, int power, int resistance, Effects effect) {
+        super(name, type, cost, power, resistance);
         this.effect = effect;
     }
 }

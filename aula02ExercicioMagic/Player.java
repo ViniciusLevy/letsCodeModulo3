@@ -1,14 +1,21 @@
 package aula02ExercicioMagic;
 
+import java.util.List;
+
 public class Player {
 
-    protected int lifePoints;
+    private int hp;
+    private List<Card> playerDeck;
 
-    public int getLifePoints() {
-        return lifePoints;
+    public int getHp() {
+        return hp;
     }
 
-    public void setLifePoints(int lifePoints) {
-        this.lifePoints = lifePoints;
+    public List<Card> getPlayerDeck() {
+        return playerDeck;
+    }
+
+    public void addCard (Card card) {
+        playerDeck.add(card);
     }
 }
