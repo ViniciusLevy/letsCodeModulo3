@@ -7,8 +7,8 @@ public abstract class Product {
     private int id;
     private double price;
 
-    protected Product(String type, String name, int id, double price) {
-        this.sort = type;
+    protected Product(String sort, String name, int id, double price) {
+        this.sort = sort;
         this.name = name;
         this.id = id;
         this.price = price;

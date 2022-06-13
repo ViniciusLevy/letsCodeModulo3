@@ -26,8 +26,8 @@ public class Cashier implements ICashier{
 
     @Override
     public void purchaseIncome(Purchase purchase) {
-        cash += purchase.getTotal();
-        System.out.println("Purchase Income added to balance: R$ " + purchase.getTotal());
+        cash += purchase.getTotalFinal();
+        System.out.println("Purchase Income added to balance: R$ " + purchase.getTotalFinal());
         System.out.println();
     }
 }
